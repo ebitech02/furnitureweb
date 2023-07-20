@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Nunito:ital,wght@0,200;0,400;0,600;0,700;1,300&family=Permanent+Marker&family=Poppins:wght@200;300;400;600;700;900&family=Roboto:wght@400;500&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: rgb(233, 231, 232);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+header .navbar ul {
+    list-style-type: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+    text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+    background-color: rgb(80, 79, 79);
+    color: rgb(255, 255, 255);
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.555);
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li:focus-within>ul,
+header .navbar ul li:hover>ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+.down {
+    margin-top: 9rem;
+}
+
+.first {
+    text-align: center;
+}
+
+h1 {
+    margin: 1.5em;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.btn {
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    transition: 3s;
+    transform: scale(1.1);
+    background-color: hsla(300, 0%, 61%, 0.603);
+}
+
+.store {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.sell {
+    font-size: 400;
+    margin: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+img {
+    height: 320px;
+    width: 260px;
+    border-radius: 20px;
+}
+
+.gallery div {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.gallery div:hover {
+    transition: 0.2s ease;
+    transform: scale(0.9);
+}
+
+.gallery img {
+    margin: 0.5rem;
+}
+
+.last {
+    margin: 2em 0;
+    background-color: rgba(202, 201, 201, 0.384);
+    height: 400px;
+}
+
+.contact {
+    padding: 4em 0 0 0;
+    text-align: center;
+}
+
+.get {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+form input,
+textarea {
+    font-size: 20px;
+    padding: 0.7rem 0.9rem;
+    margin: 3px;
+    color: black;
+    border: none;
+    border-radius: 20px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+}
+
+form button {
+    color: black;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.253);
+    border: none;
+    margin: 10px;
+    padding: 1rem 2rem;
+}
+
+form button:hover {
+    background-color: hsla(315, 2%, 67%, 0.514);
+    transition: 2s ease;
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 2rem 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 20px;
+    }
+    header label {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    header .navbar ul li {
+        width: 100%;
+    }
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li {
+        background-color: #eee;
+    }
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+    #menu-bar:checked~.navbar {
+        display: initial;
+    }
+}
+
+@media (min-width: 991px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
